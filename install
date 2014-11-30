@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+mkdir `echo $HOME`/.tweet_history
+cp ./makeTweet.py `echo $HOME`/tweet_history/makeTweet.py
+cp ./tweet_history /etc/periodic/daily/tweet_history

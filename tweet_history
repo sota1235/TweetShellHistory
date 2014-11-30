@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+fc -lf 1 > `echo $HOME`/.tweet_history/history
+python `echo $HOME`/.tweet_history/makeTweet.py
+# tw `echo tweet` --user=sota1235
