@@ -31,10 +31,13 @@ for line in f:
 f.close()
 
 # write tweets to tweet.txt
-tweet = ""
+tweet = "今日は"
+c = 0 # tweetするコマンド数
 f = open("./tweet.txt", "w")
-for key, val in tweets.items():
-    tweet += key + "を" + str(val) + "回,"
+for key, val in sorted(tweets.items(), key=lambda x:x[1], reverse=True):
+    tweet += key + "を" + str(val) + "回、"
+    c += 1
+    if c == 13: break
 tweet = tweet[:-1] + "実行した。"
 f.write(tweet)
 f.close()
